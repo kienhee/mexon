@@ -1,0 +1,112 @@
+.section-sale {
+    height: 279px;
+    border-radius: 20px;
+    background-color: #F7F7F7;
+    padding: 50px 100px;
+
+    &__content {
+        gap: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__img {
+        width: 33.3333%;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__left,
+    &__right {
+        width: 33.3333%;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 2.25rem; //36px
+        line-height: 50px;
+    }
+
+    &__pragraph {
+        font-weight: 400;
+        color: #666666;
+    }
+
+    &__price {
+        font-weight: 500;
+        font-size: 1.875rem; //30px;
+        color: #E02B2B;
+    }
+
+    &__price-old {
+        color: #666666;
+        text-decoration: line-through;
+        font-size: 1.125rem; //18px;
+    }
+
+    &__btn {
+        max-width: 50%;
+    }
+}
+
+@media only screen and(max-width: 46.188rem) {
+    .section-sale {
+        height: auto;
+        border-radius: 20px;
+        background-color: #F7F7F7;
+        padding: 32px 10px;
+        text-align: center;
+
+        &__content {
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        &__img {
+            order: 1;
+            width: 100%;
+
+
+        }
+
+        &__left {
+            order: 2;
+        }
+
+        &__right {
+            order: 3;
+        }
+
+        &__left,
+        &__right {
+            width: 100%;
+        }
+
+        &__btn {
+            max-width: 100%;
+        }
+    }
+}
+
+@media only screen and(min-width:46.25rem)and(max-width: 63.938rem) {
+    .section-sale {
+        height: auto;
+        border-radius: 20px;
+        background-color: #F7F7F7;
+        padding: 32px 15px;
+
+        &__content {
+            gap: 10px;
+
+        }
+
+        &__btn {
+            max-width: 70%;
+        }
+    }
+}

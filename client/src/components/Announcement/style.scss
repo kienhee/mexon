@@ -1,0 +1,31 @@
+@import "../../assets/css/mixin";
+
+#announcement {
+    border-bottom: 1px solid #EEEEE0;
+}
+
+.announcement {
+   &__container
+   {
+        @include flex(space-between, center);
+        padding: 10px 0;
+   }
+    &__socials {
+        @include flex(space-between, center);
+        gap: 0 30px;
+        & a{
+            @include flex(center, center);
+        }
+    }
+
+    &__icon {
+        font-size: 1.125rem; //18px;
+
+    }
+    &__icon:hover ion-icon{
+        color: rgb(214, 57, 46);
+    }
+}
+@media only screen and(max-width: 46.188rem){
+    #announcement{display: none;}
+}

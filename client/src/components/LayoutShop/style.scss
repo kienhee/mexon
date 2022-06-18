@@ -1,0 +1,271 @@
+@import "../../assets/css/mixin";
+
+.shop {
+    &__container {
+        display: flex;
+        gap: 30px;
+
+    }
+
+    &__col {
+        &-left {
+            width: 20%;
+        }
+
+        &-right {
+            width: 80%;
+        }
+    }
+}
+
+.shop-layout {
+    &__nav {
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    &__btn {
+        background-color: #F2F2F2;
+        padding: 5px;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &-1 {
+            display: none;
+        }
+
+    }
+
+    &__btn:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    &__feature {
+        display: flex;
+        gap: 10px;
+
+        & ion-icon {
+            font-size: 1.25rem; //20px;
+        }
+    }
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(80% / 4), 1fr));
+    gap: 20px;
+}
+
+.grid-4 .card__img {
+    height: 190px;
+}
+
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(80% / 3), 1fr));
+    grid-gap: 30px;
+}
+
+.grid-3 .card__img {
+    height: 250px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(80% / 2), 1fr));
+    grid-gap: 30px;
+}
+
+.grid-2 .card__img {
+    height: 340px;
+}
+
+.grid-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    grid-gap: 30px;
+}
+
+@media only screen and(min-width:37.5rem)and(max-width: 63.938rem) {
+    .shop {
+        &__container {
+
+            flex-direction: column;
+        }
+
+        &__col {
+            &-left {
+                width: 100%;
+            }
+
+            &-right {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 24.938rem) {
+    .shop {
+        &__container {
+
+            flex-direction: column;
+        }
+
+        &__col {
+            &-left {
+                width: 100%;
+            }
+
+            &-right {
+                width: 100%;
+            }
+        }
+    }
+
+    .shop-layout {
+
+        &__btn {
+
+
+            &-1 {
+                display: flex;
+            }
+
+            &-3,
+            &-4 {
+                display: none;
+            }
+        }
+    }
+
+    .shop-layout .card__content-price {
+        flex-direction: column;
+    }
+
+    .grid-2 {
+        gap: 20px;
+    }
+
+    .grid-2 .card__img {
+        height: 150px;
+    }
+
+    .grid-1 .card__img {
+        height: 259px;
+    }
+}
+
+//mb duoi 400px
+
+@media only screen and(min-width: 25rem) and(max-width:37.438rem) {
+    .shop {
+        &__container {
+
+            flex-direction: column;
+        }
+
+        &__col {
+            &-left {
+                width: 100%;
+            }
+
+            &-right {
+                width: 100%;
+            }
+        }
+    }
+
+    .shop-layout {
+
+        &__btn {
+
+
+            &-1 {
+                display: flex;
+            }
+
+            &-3,
+            &-4 {
+                display: none;
+            }
+        }
+    }
+
+    .shop-layout .card__content-price {
+        flex-direction: column;
+    }
+
+    .grid-2 {
+        gap: 20px;
+    }
+
+    .grid-2 .card__img {
+        height: 190px;
+    }
+
+    .grid-1 .card__img {
+        height: 296px;
+    }
+}
+
+//mb tuwf 400 -> 599
+@media only screen and(min-width:37.5rem)and(max-width: 63.938rem) {
+    .shop {
+        &__container {
+
+            flex-direction: column;
+        }
+
+        &__col {
+            &-left {
+                width: 100%;
+            }
+
+            &-right {
+                width: 100%;
+            }
+        }
+    }
+
+    .shop-layout {
+
+        &__btn {
+
+
+            &-1 {
+                display: none;
+            }
+
+
+        }
+    }
+
+    .shop-layout .card__content-price {
+        flex-direction: column;
+    }
+
+    .grid-2,
+    .gird-3,
+    .grid-4 {
+        gap: 20px;
+    }
+
+    .grid-2 .card__img {
+        height: 200px;
+    }
+
+    .grid-3 .card__img {
+        height: 180px;
+    }
+
+    .grid-4 .card__img {
+        height: 130px;
+    }
+
+}

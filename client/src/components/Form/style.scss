@@ -1,0 +1,98 @@
+@import "../../assets/css/mixin";
+
+.login {
+    max-width: 800px;
+    margin: 0 auto;
+
+    &__container {
+        @include flex(space-between, flex-start);
+        gap: 50px;
+    }
+
+    &__form {
+        width: 50%;
+        display: block;
+    }
+
+    &__right {
+        width: 50%;
+    }
+
+
+
+    &__forgot {
+        color: #666666;
+        text-decoration: underline;
+        margin: 10px 0;
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+.reset-password {
+    width: 50%;
+}
+
+@media only screen and(max-width: 46.188rem) {
+    .login {
+        &__container {
+            @include flex(center, center);
+            flex-direction: column;
+
+        }
+
+        &__form {
+            width: 100%;
+
+        }
+
+        &__right {
+            width: 100%;
+        }
+    }
+
+    .reset-password {
+        width: 100%;
+    }
+}
+
+.register {
+    max-width: 500px;
+    margin: 0 auto;
+
+    &__btn {
+        margin-top: 20px !important;
+    }
+}
+
+.form__group {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.form__control {
+    padding: 15px;
+    width: 100%;
+    background-color: #f8f8f8;
+    border: 1px solid #eeeee0;
+    border-radius: 6px;
+    outline: 1px solid #222222;
+}
+
+.btn-form {
+    width: 100%;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.form__heading {
+    font-weight: 500;
+    font-size: 1.5rem; //24px;
+    margin-bottom: 30px;
+}
+
+.form__paragraph {
+    color: #666666;
+    margin-bottom: 10px;
+}

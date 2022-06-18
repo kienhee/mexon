@@ -1,0 +1,155 @@
+.container {
+    max-width: 1320px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.color-secondary {
+    color: #666666;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.flex-direction {
+    flex-direction: column;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 18px;
+    position: absolute;
+    z-index: 1;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem; //22px;
+}
+
+.tooltiptext-left {
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 18px;
+    position: absolute;
+    z-index: 1;
+    right: 110%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem; //22px;
+    text-align: center;
+    width: 100px;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 0;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    transform: rotate(90deg);
+}
+
+.tooltiptext-left::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -10px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    transform: rotate(267deg);
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip:hover .tooltiptext-left {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn {
+    display: block;
+    padding: 15px 32px;
+    border-radius: 1.875rem; //30px
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-outline {
+
+    background-color: #fff;
+    color: #000;
+    border: 1px solid;
+}
+
+.bg-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    transition: all 0.25s linear;
+    z-index: 1;
+}
+
+.remove-overlay {
+    opacity: 0;
+}
+
+.showMenu,
+.showCart {
+    transform: translateX(0%) !important;
+}
+
+@media only screen and(max-width: 46.188rem) {}

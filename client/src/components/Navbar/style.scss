@@ -1,0 +1,98 @@
+@import "../../assets/css/mixin";
+
+.navbar {
+    background-color: #000;
+    z-index: 2;
+    padding: 12px 0;
+
+    &__menu {
+        @include flex(flex-start, center);
+        gap: 0 50px;
+
+    }
+
+    &__item {
+        font-weight: 700;
+        color: #fff;
+        position: relative;
+    }
+
+    &__item::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -6px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    &__item:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    &__feature-mobile {
+        display: none;
+    }
+}
+
+@media only screen and(max-width: 46.188rem) {
+    .navbar {
+        background-color: #fff;
+        width: 80%;
+        height: 100%;
+        padding: 32px 15px 65px 15px;
+        position: fixed;
+        top: 0;
+        transform: translateX(-100%);
+        transition: all 0.25s linear;
+
+        &__container {
+            @include flex(space-between, flex-start);
+            flex-direction: column;
+            padding: 12px 0;
+            height: 100%;
+        }
+
+        &__menu {
+            @include flex(flex-start, flex-start);
+            flex-direction: column;
+            gap: 24px 0;
+        }
+
+        &__item {
+            color: #000;
+        }
+
+        &__feature-mobile {
+            display: block;
+            @include flex(center, flex-start);
+            flex-direction: column;
+            width: 100%;
+
+            &-title {
+                font-size: 1.25rem;
+                font-weight: 500;
+                margin-bottom: 24px;
+            }
+
+            &-btn {
+                @include flex(center, center);
+                flex-direction: column;
+                gap: 20px 0;
+                width: 100%;
+
+                & .btn {
+                    width: 100%;
+                    border: 1px solid;
+                }
+
+            }
+        }
+    }
+}

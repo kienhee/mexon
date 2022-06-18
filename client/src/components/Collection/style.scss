@@ -1,0 +1,96 @@
+@import "../../assets/css/mixin";
+
+.collection {
+    &__container {
+        @include flex(space-between, center);
+    }
+
+    &__item {
+        @include flex(center, center);
+        flex-direction: column;
+        gap: 20px;
+        cursor: pointer;
+    }
+
+    &__img {
+        width: 165px;
+        height: 165px;
+        overflow: hidden;
+
+        border-radius: 5rem;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__img:hover img {
+        transform: scale(1.1);
+        transition: all 1.5s linear;
+    }
+
+    &__name {
+        font-size: 1.25rem; //20px;
+        font-weight: 500;
+    }
+
+    &__sub {
+        position: relative;
+        top: -10px;
+        font-size: 0.75rem; //22px;
+    }
+}
+
+@media only screen and(min-width:46.25rem)and(max-width: 63.938rem) {
+    .collection {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+
+        &__img {
+            width: 350px;
+            height: 350px;
+        }
+
+        &__img:hover img {
+            transform: scale(1);
+
+        }
+    }
+
+}
+
+@media only screen and(max-width: 46.188rem) {
+    .collection {
+        &__container {
+            overflow-y: hidden;
+            gap: 30px;
+        }
+
+        &__container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            overflow-y: scroll;
+        }
+
+       
+
+        &__container::-webkit-scrollbar {
+            display: none;
+        }
+
+        &__img {
+            width: 140px;
+            height: 140px;
+        }
+
+        &__img:hover img {
+            transform: scale(1);
+
+        }
+    }
+}

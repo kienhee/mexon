@@ -1,0 +1,59 @@
+.benefit {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 350px;
+        text-align: center;
+
+    }
+
+    &__img {
+        width: 62px;
+        height: 62px;
+        object-fit: cover;
+        margin-bottom: 30px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 1.5rem; //24px;
+        margin-bottom: 10px;
+    }
+
+    &__content {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #666666;
+    }
+}
+
+@media only screen and(max-width: 46.188rem) {
+    .benefit {
+        &__container {
+
+            flex-direction: column;
+
+        }
+
+        &__item {
+
+
+            width: 256px;
+
+        }
+
+        &__img {
+            margin-bottom: 5px;
+        }
+
+    }
+}
