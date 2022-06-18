@@ -1,16 +1,21 @@
-
 import "./style.scss";
 export default function Card(props) {
   return (
     <>
       {props.Data?.map((item) => (
-        <div className="card" key={item.id}>
+        <div className="card" key={item._id}>
           <div className="card__img">
-            <img src={item.image} alt={item.name} />
+            <img
+              src={`http://localhost:8080/images/${item.images[0]}`}
+              alt={item.name}
+            />
             <div className="card__img-sub">
-              <img src={item.imageSub} />
+              <img
+                src={`http://localhost:8080/images/${item.images[1]}`}
+                alt={item.name}
+              />
             </div>
-            <div className="card__hover"> 
+            <div className="card__hover">
               <ul className="card__feature">
                 <li className="card__icon card__icon-wishlist tooltip">
                   <p className="tooltiptext-left">Wishlist</p>
@@ -22,7 +27,7 @@ export default function Card(props) {
                   <ion-icon name="eye-outline"></ion-icon>
                 </li>
               </ul>
-              <a href="" className="btn btn-primary card__btn">
+              <a href="/" className="btn btn-primary card__btn">
                 Quick Add
               </a>
             </div>
@@ -32,7 +37,7 @@ export default function Card(props) {
             <h3 className="card__name">{item.name}</h3>
             <div className="flex gap-10 align-center justify-center card__content-price">
               <p className="card__price">${item.price}.00</p>
-              <p className="card__price-old">${item.oldPrice}.00</p>
+              <p className="card__price-old">${item.sale}.00</p>
             </div>
           </div>
         </div>

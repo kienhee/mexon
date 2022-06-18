@@ -16,7 +16,7 @@ export default function ShopSetup() {
             Explore our latest and greatest electronics and accessories their
             new features will be sure to blow your mind and your workflow.
           </p>
-          <a href="#" className="shop-setup__btn btn btn-primary">
+          <a href="/" className="shop-setup__btn btn btn-primary">
             shop setup
           </a>
         </div>

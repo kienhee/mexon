@@ -1,20 +1,20 @@
-import { useState, useRef, useEffect } from "react";
+// import { useState, useRef, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Announcement from "../components/Announcement";
 import HeaderTop from "../components/HeaderTop";
 import "./style.scss";
 function Layout() {
-  const [scrollY, setScrollY] = useState(0);
-  const [showHide, setShowHide] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.pageYOffset;
-      if (currentScroll <= 0) {
-        // body.classList.remove(scrollUp);
-        return;
-      }
-    });
-  }, []);
+  // const [scrollY, setScrollY] = useState(0);
+  // const [showHide, setShowHide] = useState(false);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => {
+  //     const currentScroll = window.pageYOffset;
+  //     if (currentScroll <= 0) {
+  //       // body.classList.remove(scrollUp);
+  //       return;
+  //     }
+  //   });
+  // }, []);
   return (
     <>
       <header id="header">
@@ -47,19 +47,19 @@ function Layout() {
               <h4 className="footer__title">Company</h4>
               <ul className="footer__list ">
                 <li>
-                  <a href="">My account </a>
+                  <a href="/">My account </a>
                 </li>
                 <li>
-                  <a href=""> Cart </a>
+                  <a href="/"> Cart </a>
                 </li>
                 <li>
-                  <a href=""> Wishlist</a>
+                  <a href="/"> Wishlist</a>
                 </li>
                 <li>
-                  <a href=""> Product</a>
+                  <a href="/"> Product</a>
                 </li>
                 <li>
-                  <a href=""> Compare</a>
+                  <a href="/"> Compare</a>
                 </li>
               </ul>
             </div>
@@ -67,19 +67,19 @@ function Layout() {
               <h4 className="footer__title">Infomation</h4>
               <ul className="footer__list">
                 <li>
-                  <a href="">Register</a>
+                  <a href="/">Register</a>
                 </li>
                 <li>
-                  <a href="">Login</a>
+                  <a href="/">Login</a>
                 </li>
                 <li>
-                  <a href=""> My Cart</a>
+                  <a href="/"> My Cart</a>
                 </li>
                 <li>
-                  <a href=""> Wishlist</a>
+                  <a href="/"> Wishlist</a>
                 </li>
                 <li>
-                  <a href=""> Product</a>
+                  <a href="/"> Product</a>
                 </li>
               </ul>
             </div>
@@ -87,19 +87,19 @@ function Layout() {
               <h4 className="footer__title">Contact</h4>
               <ul className="footer__list">
                 <li>
-                  <a href="">Aboutus</a>
+                  <a href="/">Aboutus</a>
                 </li>
                 <li>
-                  <a href="">Contact us</a>
+                  <a href="/">Contact us</a>
                 </li>
                 <li>
-                  <a href=""></a>
+                  <a href="/"></a>
                 </li>
                 <li>
-                  <a href="">FAQS</a>
+                  <a href="/">FAQS</a>
                 </li>
                 <li>
-                  <a href="">Blogs</a>
+                  <a href="/">Blogs</a>
                 </li>
               </ul>
             </div>
@@ -107,16 +107,16 @@ function Layout() {
               <h4 className="footer__title">Follow</h4>
               <ul className="footer__list">
                 <li>
-                  <a href="">Facebook</a>
+                  <a href="/">Facebook</a>
                 </li>
                 <li>
-                  <a href="">Pinterest</a>
+                  <a href="/">Pinterest</a>
                 </li>
                 <li>
-                  <a href="">Instagram</a>
+                  <a href="/">Instagram</a>
                 </li>
                 <li>
-                  <a href="">Twitter</a>
+                  <a href="/">Twitter</a>
                 </li>
               </ul>
             </div>

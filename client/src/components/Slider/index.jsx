@@ -26,7 +26,7 @@ export default function index(props) {
       <Slider {...settings}>
         {props.data?.map((item) => (
           <div className="slider__item" key={item.id}>
-            <img src={item.image} className="slider__img" />
+            <img src={item.image} className="slider__img" alt={item.name} />
             <div className="slider__container container">
               <div className="slider__content">
                 <div className="slider__subtitle">{item.subtitle}</div>
